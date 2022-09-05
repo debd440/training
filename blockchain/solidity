@@ -1,0 +1,23 @@
+Solidity Tutorials
+-----------------------
+Use remix to code. Solidity is the programming langage.
+Solidity source file -> Solidity Compiler(solc(c++ lib), solcjs(node lib)) -> ABI(Abstract Binanry Interface) + Contract Bytecode
+ABI -> Responsible for API that gets trigger from outside client.
+Contract Bytecode gets deployed in EVM(Ethereum Virtual Machine)
+
+Solidity contract must have license.
+// SPDX-License-Identifier: GPL-3.0-or-later
+
+Sample contract
+// SPDX-License-Identifier: GPL-3.0-or-later
+
+pragma solidity 0.8.16;
+
+contract Property{
+    
+    int public value;
+
+    function setValue(int _value) public {
+        value=_value;
+    }
+}

@@ -1,0 +1,105 @@
+Blockchain name is ethereum. Coin name is ether.
+Ethereum is  Dectralized, Immutable, Unstoppable, Censorship Free, No downtime, More private.
+https://ethernodes.org/ provide details stat about ether nodes & mining.
+web3.js or web3j is default tools to communicate with ethereum network.
+
+Ether Nodes runs on ethereum client such as geth(go eth). An ethereum nodes run on VM named EVM. EVM has its microkernel, stack, memory and storage.
+
+3 different types of nodes are available.
+1) Full Node - Store blockchain copy locally and participate in block validation.
+2) Light Node - Store blockchain headers change. Validate data based on header. It request for other infos.
+3) Archive Node- Build archival data.
+
+Ethereum Accounts
+-----------------------
+1) Externally Owned Account(EOA)-Receive, hold and send ether. EOA controlled by a private key and identified by unique address. It holds ether but not associated code. Its used for receiving, holding, sending and interacting with smart contract(deployment, calling function). Example Metamask.
+.
+2) Contract Account (CA)-Controlled by contact code. It has unique address but does not have private key. It holds ether. Since it store data in network, hence it caused money during transaction. Its code execution is triggered by EOA.
+
+Ethereum Accounts Component
+---------------------------
+Nonce: counter that indicates no of transaction sent from that account.
+Balance: in wei
+Account Address
+Account public and private key
+code: only for Contract Account (CA). This is the immutable EVM bytecode.
+storage: only for Contract Account (CA).
+
+An EOA is derived from last 20byte of public key. Public key is generated from passphase.
+Metamask connects with infura that helps to connect to Ethereum nodes.
+Use etherscan to track transaction over ethereum network.
+
+Gas measures how much work a transaction's code does.
+gasPrice is the amount users wants to pay to complete the transaction.
+Example
+Lets say, multiplication operation requires 5 gas, addition requires 3 gas and equal operation requires 3 gas, then total gas needed is 11.
+gas Price lets say 50Gwei per gas
+Then total value required = 50 Gwei*11= 550 Gwei
+if gasLimit is 10 then transaction will fail. If gasLimit is 15 then transaction will go through.
+txn fee is the actual fees that is used to complete the transaction.
+12 block confirmation is enough to block is secure.
+
+ethgasstation.info gives current gas price details.
+
+Life Cycle Of Ether Transaction
+----------------------------------
+Client Wallet (Ex. Metamask) creates the raw transaction object.
+Client sign the txn using private key in local.
+Client broadcast the txn to ether network.
+Txn then gets added to transaction pool. Txn then gets sorted by gasLimit and txn with higher gas limit will be picked up by miner.
+Miner will solve POW and add the txn in the block.
+Miner node broadcase the block to its peers.
+Block confirmation means no of blocks that are added on top of the block miner has mined.
+
+Ether Transaction Fields
+-----------------------
+from: From a/c
+to: To a/c
+value: amount that needs to transfer. It's value is zero in case contract is getting deployed.
+gasLimit: Max Gas user wants to spend on a transaction. If txn takes less that defined limit then remaining gas will be refunded to users. Standard is 21000.
+gasPrice: Gas price in Gwei for per unit of gas. 1 gas 20 Gwei. Standard is 120 Gwei.
+data: Contract Metadata. The value will be present if contract is getting deployed.
+nonce: No of txn sender has commited.
+hash: Txn Id
+
+Transaction Vs Call
+-----------------------
+Txn -> modifies blockchain, costs gas, it must be mined, takes time, return txn id.
+Calls -> does not modifies blockchain, free, no need to mine, takes less time, return a value.
+
+POS(Proof of Stakes)
+--------------------------
+Ether uses POS from Ethereum 2.0.
+Miners are called validators. To become validator they need to lock an amount of ETH in smart contract. The more eth they lock more they can validate. A validator can loose eth if they do bad practise. Validators get rewards for validating block. Validator have both risk & rewards.
+To conduct 51% attack validator needs to lock 51% eth.
+Need to install eth2 client to become validator.
+
+Eth2 Shards
+---------------
+Eth blockchain is spread over 64 nodes. So validator needs to store the data of shards they are validating.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
