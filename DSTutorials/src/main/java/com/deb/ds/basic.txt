@@ -1,0 +1,15 @@
+Time complexity is the number of operations needed to run an algorithm on large amounts of data.
+And the number of operations can be considered as time because the computer uses some time for each operation.
+For example, in the algorithm that finds the lowest value in an array, each value in the array must be compared one time.
+Every such comparison can be considered an operation, and each operation takes a certain amount of time.
+So the total time the algorithm needs to find the lowest value depends on the number of values in the array.
+O(1) - No matter the size of the array, an element can be looked up directly, it just requires one operation.
+O(n) - The algorithm must do n operations in an array with n values to find the lowest value, because the algorithm must compare each value one time.
+O(nlogn) - Average. Means an algorithm whose running time grows proportional to n times the logarithm of n.
+O(n^2) - Worst case. Means an algorithm whose running time grows proportional to the square of the input size—for example, doing a nested loop over n items.
+
+How to compute O(nlogn)?
+To compute time complexity for O(n log n), think in terms of divide + work per level:
+1. Divide: The problem size is repeatedly split (usually in half) → This creates log n levels.
+2. Work per level: At each level, the algorithm does O(n) total work.
+3. Multiply -n* log(n)
