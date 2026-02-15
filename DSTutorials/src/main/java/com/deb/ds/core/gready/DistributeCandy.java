@@ -6,10 +6,10 @@ public class DistributeCandy {
 
 	// Leetcode 135 -https://leetcode.com/problems/candy/
 	public static void main(String[] args) {
-		int ratings[] = { 1, 0, 2 };
+		int[] ratings = { 1, 0, 2 };
 		System.out.println("Example 1: " + candy(ratings));
 
-		int ratings1[] = { 1, 2, 2 };
+		int[] ratings1 = { 1, 2, 2 };
 		System.out.println("Example 1: " + candy(ratings1));
 	}
 
