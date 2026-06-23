@@ -10,15 +10,15 @@ public class FibonacciSeris {
         if (n <= 1)
             return n;
 
-        int[] store = new int[n + 1];
+        int[] dp = new int[n + 1];
 
-        store[0] = 0;
-        store[1] = 1;
+        dp[0] = 0;
+        dp[1] = 1;
 
         for (int i = 2; i <= n; i++) {
-            store[i] = store[i - 1] + store[i - 2];
+            dp[i] = dp[i - 1] + dp[i - 2];
         }
 
-        return store[n];
+        return dp[n];
     }
 }
