@@ -10,10 +10,10 @@ public class TwoSumTarget {
 	public static void main(String[] args) {
 
 		int target = 9;
-		int a[] = { 2, 11, 5, 10, 7, 8 };
+		int[] a = { 2, 11, 5, 10, 7, 8 };
 
 		// Using hashing. Complexity will be O(n)
-		int result[] = twoSumHashing(a, target);
+		int[] result = twoSumHashing(a, target);
 		System.out.println("Using Hashing: " + result[0] + ", " + result[1]);
 
 		// Using sort & binary Search. Complexity will be O(n.log(n))
@@ -39,15 +39,13 @@ public class TwoSumTarget {
 		return output;
 	}
 
-	private static int[] twoSumBinarySearch(int a[], int target) {
+	private static int[] twoSumBinarySearch(int[] a, int target) {
 
 		Arrays.sort(a);
-		for (int i = 0; i < a.length; i++) {
-			System.out.print(a[i] + "->");
-		}
+
 		int start = 0;
 		int end = a.length - 1;
-		int output[] = new int[2];
+		int[] output = new int[2];
 		while (start < end) {
 			int sum = a[start] + a[end];
 			if (sum == target) {
